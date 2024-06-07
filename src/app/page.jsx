@@ -142,7 +142,7 @@ export default function Home() {
                   <div className="flex flex-col">
                     <h3 className="font-bold">JN Aceros</h3>
                     <div className="flex justify-between space-x-2">
-                      <span>International Bussiness Asistent</span>
+                      <span>International Bussiness Assistant</span>
                       <span>(2012 - 2013)</span>
                     </div>
                   </div>
