@@ -1,4 +1,4 @@
-CodeSpace: https://shiny-space-acorn-qw75xwjpx5xcw59.github.dev
+https://github.com/codespaces/sturdy-disco-4xjprx5w9wpfjpv5
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
