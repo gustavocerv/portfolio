@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+
+
+
+body.dark header {
+  @apply text-white;
+}
+
+body.dark .navbar-container {
+  @apply bg-gray-800;
+}
+
+body.dark .nav-link-container {
+  @apply text-white;
+}
+
+body.dark .menu-toggle-container {
+  @apply text-white;
+}
+
+body.dark {
+  @apply bg-custom-dark text-custom-grey;
+}
+
+body.dark footer {
+  @apply text-white bg-gray-800;
+}
+
+body.dark .footer a {
+  @apply text-white;
+}
+
+body.dark .footer p {
+  @apply text-white;
+}
+
+body {
+  @apply min-w-full bg-white text-black;
+}
+
+body.dark .dark-mode-bg {
+  @apply bg-gray-900;
+}
+
+body.dark .dark-mode-text {
+  @apply text-white;
+}
+
+.nav-link {
+  @apply text-black dark:text-white no-underline transition-colors duration-300;
+}
+
+.nav-link:hover {
+  @apply text-blue-500 dark:text-teal-400;
+}
+
+.nav-link.active {
+  @apply font-bold text-blue-500 dark:text-teal-400;
+}
+
+/* Mobile specific styles */
+@media (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-container img {
+    order: 1;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .about-container .about-text {
+    order: 2;
+    text-align: center;
+    margin-top: 16px;
+  }
+
+  .about-container .social-links {
+    order: 3;
+    margin-top: 16px;
+  }
+
+  .about-container .email-link {
+    order: 4;
+    margin-top: 16px;
+  }
+}
+
+/* Custom styles for the Projects page */
+@media (max-width: 768px) {
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .project-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .project-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .project-card p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .project-card a {
+    display: flex;
+    align-items: center;
+    color: #007bff;
+  }
+
+  .project-card a:hover {
+    color: #0056b3;
+  }
+}
