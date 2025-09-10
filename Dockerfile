@@ -1,23 +1,24 @@
-# Dockerfile
-FROM node:18-alpine
-
+# Stage 1: Install dependencies
+FROM node:18-alpine AS deps
 WORKDIR /app
-
-# Copy package.json first to leverage Docker cache
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy source code
+# Stage 2: Build Next.js
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-
-# Build the React app
 RUN npm run build
 
-# Use Nginx to serve the build
-FROM nginx:alpine
-COPY --from=0 /app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Stage 3: Run Next.js
+FROM node:18-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+COPY --from=builder /app/.next ./.next
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/node_modules ./node_modules
 
+EXPOSE 3000
+CMD ["npm", "start"]
