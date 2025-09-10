@@ -1,36 +1,43 @@
-name: Deploy to Cloud Run
+name: Build and Deploy Portfolio App
 
 on:
   push:
     branches:
-      - main  # Trigger only on main branch
-  workflow_dispatch: # Allows manual triggering
+      - main  # Trigger on push to main branch
 
 jobs:
-  deploy:
+  build-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    # 1️⃣ Checkout the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Cloud SDK
-        uses: google-github-actions/setup-gcloud@v1
-        with:
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
-          service_account_key: ${{ secrets.GCP_KEY_JSON }}
+    # 2️⃣ Authenticate with GCP using service account JSON
+    - name: Authenticate GCP
+      uses: google-github-actions/auth@v1
+      with:
+        credentials_json: ${{ secrets.GCP_KEY_JSON }}
 
-      - name: Build Docker image
-        run: |
-          docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/teamlab2-app-repo/portfolio-app:latest .
+    # 3️⃣ Configure Docker to use GCP Artifact Registry
+    - name: Configure Docker for GCP
+      run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
-      - name: Push Docker image
-        run: |
-          docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/teamlab2-app-repo/portfolio-app:latest
+    # 4️⃣ Build Docker image
+    - name: Build Docker image
+      run: docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/teamlab2-app-repo/portfolio-app:latest .
 
-      - name: Deploy to Cloud Run
-        run: |
-          gcloud run deploy portfolio-app \
-            --image us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT_ID }}/teamlab2-app-repo/portfolio-app:latest \
-            --region us-central1 \
-            --platform managed \
-            --allow-unauthenticated
+    # 5️⃣ Push Docker image to Artifact Registry
+    - name: Push Docker image
+      run: docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/teamlab2-app-repo/portfolio-app:latest
+
+    # 6️⃣ Deploy to Cloud Run
+    - name: Deploy to Cloud Run
+      run: |
+        gcloud run deploy portfolio-app \
+          --image us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/teamlab2-app-repo/portfolio-app:latest \
+          --region us-central1 \
+          --platform managed \
+          --allow-unauthenticated \
+          --port 3000
