@@ -1,50 +1,45 @@
-name: CI/CD Portfolio App
+name: Deploy Portfolio App to Cloud Run
 
 on:
   push:
     branches:
-      - main
+      - main  # Deploy only on pushes to the main branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
-    env:
-      REGION: us-central1
-      IMAGE: portfolio-app
-      REPO: portfolio-repo
-
     steps:
-      # 1. Checkout repository
+      # 1. Checkout your code
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # 2. Authenticate to Google Cloud
+      # 2. Authenticate to GCP using service account key
       - name: Set up GCP credentials
         uses: google-github-actions/auth@v1
         with:
           credentials_json: ${{ secrets.GCP_KEY_JSON }}
 
-      # 3. Configure Docker for GCP Artifact Registry
-      - name: Configure Docker
+      # 3. Configure Docker to use gcloud for authentication
+      - name: Configure Docker for GCP
         run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
       # 4. Build Docker image
       - name: Build Docker image
         run: |
-          docker build -t us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/$REPO/$IMAGE:latest .
+          docker build -t us-central1-docker.pkg.dev/spartan-grail-471709-p1/portfolio-repo/portfolio-app:latest .
 
-      # 5. Push Docker image
+      # 5. Push Docker image to Artifact Registry
       - name: Push Docker image
         run: |
-          docker push us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/$REPO/$IMAGE:latest
+          docker push us-central1-docker.pkg.dev/spartan-grail-471709-p1/portfolio-repo/portfolio-app:latest
 
       # 6. Deploy to Cloud Run
       - name: Deploy to Cloud Run
         run: |
-          gcloud run deploy $IMAGE \
-            --image us-central1-docker.pkg.dev/${{ secrets.GCP_PROJECT }}/$REPO/$IMAGE:latest \
-            --region $REGION \
+          gcloud run deploy portfolio-app \
+            --image us-central1-docker.pkg.dev/spartan-grail-471709-p1/portfolio-repo/portfolio-app:latest \
+            --region us-central1 \
             --platform managed \
             --allow-unauthenticated \
-            --quiet
+            --port 3000
