@@ -3,7 +3,7 @@ import Footer from '../../components/Footer/Footer';
 
 export const metadata = {
   title: 'Portfolio - Uses',
-  description: 'Uses page of my portfolio.',
+  description: 'Uses page of my cybersecurity portfolio.',
 };
 
 const items = [
@@ -11,62 +11,80 @@ const items = [
     category: "Workstation",
     items: [
       {
-        name: "Ergonomic Chair",
-        description: "Comfort meets functionality with this ergonomic chair. Designed to support long hours of work, it ensures you maintain good posture and stay comfortable throughout the day."
-      }, {
+        name: "High-Spec Laptop",
+        description: "A powerful laptop with a fast processor, ample RAM, and SSD storage, perfect for running virtual machines, penetration testing labs, and cybersecurity tools."
+      },
+      {
+        name: "Dual Monitors",
+        description: "A dual monitor setup allows me to monitor systems, analyze logs, and multitask efficiently during security assessments and threat analysis."
+      },
+      {
         name: "Mechanical Keyboard",
-        description: "Experience the tactile joy of a mechanical keyboard. With customizable keys and a satisfying click, it enhances typing speed and accuracy, making coding sessions a breeze."
-      }, {
-        name: "Ultra-Wide Monitor",
-        description: "Expand your workspace with an ultra-wide monitor. Perfect for multitasking, it allows you to have multiple windows open side-by-side, boosting productivity and efficiency."
+        description: "Reliable mechanical keyboard for coding, scripting, and penetration testing tasks, offering tactile feedback and comfort for long sessions."
       },
-      // Add more items as needed
     ],
   },
   {
-    category: "Development tools",
+    category: "Security Tools",
     items: [
       {
-        name: "Visual Studio Code",
-        description: "A powerful and versatile code editor that supports a wide range of programming languages. With its extensive library of extensions, it can be customized to fit any development workflow."
-      }, {
-        name: "GitHub",
-        description: "The go-to platform for version control and collaboration. GitHub makes it easy to manage code repositories, track changes, and collaborate with other developers on projects."
-      }, {
-        name: "Postman",
-        description: "An essential tool for API development and testing. Postman simplifies the process of creating, testing, and documenting APIs, ensuring seamless integration and functionality."
+        name: "Kali Linux",
+        description: "The go-to operating system for penetration testing, ethical hacking, and security research. Comes preloaded with hundreds of cybersecurity tools."
       },
-      // Add more items as needed
+      {
+        name: "Wireshark",
+        description: "A network protocol analyzer that captures and inspects packets in real time, essential for network troubleshooting and security monitoring."
+      },
+      {
+        name: "Metasploit Framework",
+        description: "A powerful penetration testing tool used to discover, exploit, and validate vulnerabilities in systems and networks."
+      },
+      {
+        name: "Nmap",
+        description: "A network scanning tool to identify open ports, services, and vulnerabilities, forming the backbone of reconnaissance in cybersecurity assessments."
+      },
+      {
+        name: "Burp Suite",
+        description: "An integrated platform for performing security testing of web applications, including scanning, spidering, and vulnerability analysis."
+      },
+      {
+        name: "OWASP ZAP",
+        description: "An open-source web application security scanner to detect vulnerabilities and enhance application security."
+      },
     ],
   },
   {
-    category: "Design",
+    category: "Cloud & Networking",
     items: [
       {
-        name: "Whimsical",
-        description: "A versatile tool for creating flowcharts, wireframes, and mind maps. Whimsical's intuitive interface makes it easy to visualize ideas and collaborate with team members."
+        name: "AWS Cloud Lab",
+        description: "Used for simulating cloud environments, testing cloud security configurations, and running cloud-based security experiments safely."
       },
       {
-        name: "Figma",
-        description: "Initially adopted as a design tool, Figma has evolved into our virtual whiteboard that serves the entire company. Its powerful collaboration features make it an indispensable part of our design and brainstorming process."
-      }, 
-      // Add more items as needed
+        name: "Virtual Private Network (VPN)",
+        description: "Essential for secure remote connections, encrypted browsing, and protecting sensitive information when testing external networks."
+      },
+      {
+        name: "Cisco Packet Tracer",
+        description: "A network simulation tool to design, configure, and troubleshoot network topologies and test security configurations in a virtual environment."
+      },
     ],
   },
   {
-    category: "Productivity",
+    category: "Productivity & Learning",
     items: [
       {
         name: "Notion",
-        description: "A comprehensive productivity tool that combines note-taking, task management, and project planning. Notion's flexibility allows you to create a personalized workspace that adapts to your needs."
-      }, {
-        name: "Trello",
-        description: "A visual project management tool that uses boards, lists, and cards to organize tasks and projects. Trello's simplicity and ease of use make it perfect for managing both personal and professional projects."
-      }, {
-        name: "Slack",
-        description: "A communication platform that brings teams together. With channels, direct messaging, and integrations with other tools, Slack keeps everyone connected and informed."
+        description: "Organizes cybersecurity notes, lab results, and project documentation in a structured and searchable way."
       },
-      // Add more items as needed
+      {
+        name: "GitHub",
+        description: "Hosts scripts, pentesting tools, and security projects while tracking version history and collaboration."
+      },
+      {
+        name: "Cybersecurity Blogs & Resources",
+        description: "Regularly follow resources like OWASP, Hack The Box, and cybersecurity news sites to stay updated on the latest threats and tools."
+      },
     ],
   },
 ];
@@ -78,8 +96,10 @@ export default function Uses() {
         <Navbar />
       </header>
       <main className="container mx-auto px-4 py-8 lg:w-2/3 lg:mx-auto lg:py-16">
-        <h1 className="text-5xl font-bold mb-6 lg:w-2/3 dark:text-white">Gadgets, Tools, and Recommendations</h1>
-        <p className="mb-8 dark:text-custom-grey lg:w-2/3">Welcome to my curated collection of gadgets, tools, and recommendations that power my workflow and creativity. This website, built with React and Tailwind CSS, showcases the essentials that help me stay productive, inspired, and efficient.</p>
+        <h1 className="text-5xl font-bold mb-6 lg:w-2/3 dark:text-white">Cybersecurity Tools, Gadgets, and Recommendations</h1>
+        <p className="mb-8 dark:text-custom-grey lg:w-2/3">
+          Welcome to my curated collection of cybersecurity gadgets, tools, and resources. These essentials help me stay productive, secure, and effective while exploring networks, systems, and ethical hacking practices.
+        </p>
         {items.map((category, index) => (
           <div key={index} className="mb-8">
             <div className="flex flex-col md:flex-row md:items-start">
