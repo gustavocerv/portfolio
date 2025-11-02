@@ -61,7 +61,7 @@ export default function About() {
 
           <div className="text-center lg:text-left">
             <a href="mailto:private@privateemail.com" className="text-gray-600 dark:text-gray-400 flex items-center">
-              <i className="fas fa-envelope fa-xl mr-2"></i>private@privateemail.com
+              <i className="fas fa-envelope fa-xl mr-2"></i>gscervantes.it@gmail.com
             </a>
           </div>
         </div>
