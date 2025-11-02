@@ -10,7 +10,7 @@ const Footer = () => {
           <Link href="/projects" className="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-teal-400 transition-colors duration-300">Projects</Link>
           <Link href="/uses" className="text-gray-500 dark:text-gray-400 hover:text-blue-500 dark:hover:text-teal-400 transition-colors duration-300">Uses</Link>
         </nav>
-        <p className="text-gray-500 dark:text-gray-400 items-center mb-4">&copy; 2024 Gustavo. All rights reserved.</p>
+        <p className="text-gray-500 dark:text-gray-400 items-center mb-4">&copy; 2025 Gustavo. All rights reserved.</p>
 
       </div>
     </footer>
