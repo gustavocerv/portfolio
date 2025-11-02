@@ -90,7 +90,7 @@ export default function Projects() {
       description:
         'Visit my GitHub profile to explore additional cybersecurity, automation, and programming projects — all part of my continuous learning journey.',
       website: 'https://github.com/gustavocerv?tab=repositories',
-      icon: 'fa-github',
+      icon: 'fa-cogs',
     },
   ];
 
