@@ -34,7 +34,7 @@ export default function About() {
           <hr className="my-4 w-full border-gray-300 dark:border-gray-600" />
           <div className="text-center lg:text-left">
             <a href="mailto:jane@email.com" className="text-gray-600 dark:text-gray-400 flex items-center">
-              <i className="fas fa-envelope fa-xl mr-2"></i>private@privateemail.com
+              <i className="fas fa-envelope fa-xl mr-2"></i>private@privateemail.com, https://portfolio-app-956456382165.us-central1.run.app
             </a>
           </div>
         </div>
