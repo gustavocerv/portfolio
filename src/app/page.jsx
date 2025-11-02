@@ -158,12 +158,12 @@ export default function Home() {
             <section className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="flex items-center justify-start space-x-2">
                 <i className="fas fa-cogs fa-xl"></i>
-                <h2 className="text-2xl font-bold dark:text-white">Skills</h2>
+                <h2 className="text-2xl font-bold dark:text-white">Some of the cybersecurity skills I have developed</h2>
               </div>
-              <p className="dark:text-custom-grey mb-4">Some of the cybersecurity skills I have developed</p>
               <div className="mt-4 space-y-4">
+
                 <div className="flex items-center space-x-4">
-                  <Image src="/python.png" alt="Python" width={100} height={100} className="w-12 h-12" />
+                  <Image src="/python.png" alt="Python" width={50} height={50} className="w-12 h-12" />
                   <div className="flex flex-col w-full">
                     <div className="flex justify-between">
                       <span>Python</span>
@@ -174,8 +174,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="flex items-center space-x-4">
-                  <Image src="/linux.png" alt="Linux" width={100} height={100} className="w-12 h-12" />
+                  <Image src="/linux.png" alt="Linux" width={50} height={50} className="w-12 h-12" />
                   <div className="flex flex-col w-full">
                     <div className="flex justify-between">
                       <span>Linux Administration</span>
@@ -186,8 +187,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="flex items-center space-x-4">
-                  <Image src="/network.png" alt="Networking" width={100} height={100} className="w-12 h-12" />
+                  <Image src="/network.png" alt="Networking" width={50} height={50} className="w-12 h-12" />
                   <div className="flex flex-col w-full">
                     <div className="flex justify-between">
                       <span>Networking</span>
@@ -198,8 +200,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="flex items-center space-x-4">
-                  <Image src="/pentest.png" alt="Pen Testing" width={100} height={100} className="w-12 h-12" />
+                  <Image src="/pentest.png" alt="Pen Testing" width={50} height={50} className="w-12 h-12" />
                   <div className="flex flex-col w-full">
                     <div className="flex justify-between">
                       <span>Penetration Testing</span>
@@ -210,8 +213,9 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
                 <div className="flex items-center space-x-4">
-                  <Image src="/cloud.png" alt="Cloud Security" width={100} height={100} className="w-12 h-12" />
+                  <Image src="/cloud.png" alt="Cloud Security" width={50} height={50} className="w-12 h-12" />
                   <div className="flex flex-col w-full">
                     <div className="flex justify-between">
                       <span>Cloud Security</span>
@@ -222,6 +226,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+
               </div>
             </section>
           </div>
