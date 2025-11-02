@@ -55,7 +55,7 @@ export default function Projects() {
       description:
         'Built a secure CI/CD pipeline using Docker and GitHub Actions to automate application deployment, vulnerability scanning, and container hardening.',
       website: 'https://github.com/gustavocerv/docker-ci-cd-la',
-      icon: 'fa-docker',
+      icon: 'fa-tools',
     },
     {
       name: 'Timesheet App (Cloud Deployment & Kubernetes)',
@@ -69,14 +69,14 @@ export default function Projects() {
       description:
         'Created a Python project focused on analyzing, modifying, and securing RESTful APIs with improved authentication and error handling mechanisms.',
       website: 'https://github.com/gustavocerv/Reading_and_Revising_an_API',
-      icon: 'fa-python',
+      icon: 'fa-code',
     },
     {
       name: 'Linux LAMP and SAMBA Secure Configuration',
       description:
         'Configured and hardened a Linux environment running LAMP and SAMBA services, focusing on permissions, authentication, and network isolation.',
       website: 'https://github.com/gustavocerv/Linux-LAMP-and-SAMBA',
-      icon: 'fa-linux',
+      icon: 'fa-server',
     },
     {
       name: 'Portfolio Website (React + Tailwind)',
