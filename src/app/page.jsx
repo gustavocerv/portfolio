@@ -126,34 +126,75 @@ export default function Home() {
               <div>{message}</div>
             </section>
 
-            <div className="flex flex-col mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <div className="flex items-center justify-start space-x-2">
-                <i className="fas fa-briefcase fa-xl"></i>
-                <h2 className="text-2xl font-bold dark:text-white">Work</h2>
-              </div>
-              <div className="mt-4 space-y-4">
-                <div className="flex items-center space-x-4 dark:text-custom-grey">
-                  <Image src="/lumen.png" alt="Lumen" width={50} height={50} className="w-8 h-8" />
-                  <div className="flex flex-col">
-                    <h3 className="font-bold">Lumen</h3>
-                    <div className="flex justify-between space-x-2">
-                      <span>Cybersecurity Analyst</span>
-                      <span>(2024)</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4 dark:text-custom-grey">
-                  <Image src="/jn.png" alt="JN Aceros" width={50} height={50} className="w-8 h-8" />
-                  <div className="flex flex-col">
-                    <h3 className="font-bold">JN Aceros</h3>
-                    <div className="flex justify-between space-x-2">
-                      <span>IT Security Intern</span>
-                      <span>(2012 - 2013)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="flex flex-col mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+  <div className="flex items-center justify-start space-x-2">
+    <i className="fas fa-briefcase fa-xl"></i>
+    <h2 className="text-2xl font-bold dark:text-white">Work</h2>
+  </div>
+  <div className="mt-4 space-y-4">
+
+    {/* Lumen */}
+    <div className="flex items-center space-x-4 dark:text-custom-grey">
+      <Image src="/lumen.png" alt="Lumen" width={50} height={50} className="w-8 h-8" />
+      <div className="flex flex-col">
+        <h3 className="font-bold">Lumen</h3>
+        <div className="flex justify-between space-x-2">
+          <span>Market Intelligence Analyst</span>
+          <span>(2024)</span>
+        </div>
+      </div>
+    </div>
+
+    {/* JN Aceros */}
+    <div className="flex items-center space-x-4 dark:text-custom-grey">
+      <Image src="/jn.png" alt="JN Aceros" width={50} height={50} className="w-8 h-8" />
+      <div className="flex flex-col">
+        <h3 className="font-bold">JN Aceros</h3>
+        <div className="flex justify-between space-x-2">
+          <span>International Bussiness Assistant</span>
+          <span>(2012 - 2013)</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Independent Consultant */}
+    <div className="flex items-center space-x-4 dark:text-custom-grey">
+      <Image src="/independent.png" alt="Independent Consultant" width={50} height={50} className="w-8 h-8" />
+      <div className="flex flex-col">
+        <h3 className="font-bold">Independent Information Security & Systems Administration Consultant</h3>
+        <div className="flex justify-between space-x-2">
+          <span>Freelance / Self-Initiated Projects</span>
+          <span>(2023 - Present)</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Cybersecurity Policy Project (NDA) */}
+    <div className="flex items-center space-x-4 dark:text-custom-grey">
+      <Image src="/nda.png" alt="NDA Project" width={50} height={50} className="w-8 h-8" />
+      <div className="flex flex-col">
+        <h3 className="font-bold">Cybersecurity Policy Project (NDA)</h3>
+        <div className="flex justify-between space-x-2">
+          <span>Corporate Security & HIPAA Risk Analysis</span>
+          <span>(2024 - Fall)</span>
+        </div>
+      </div>
+    </div>
+
+    {/* Experienced Projects */}
+    <div className="flex items-center space-x-4 dark:text-custom-grey">
+      <Image src="/projects.png" alt="Experienced Projects" width={50} height={50} className="w-8 h-8" />
+      <div className="flex flex-col">
+        <h3 className="font-bold">Experienced Projects</h3>
+        <div className="flex justify-between space-x-2">
+          <span>Linux, Pen-Testing, SIEM/SOAR, Cloud, Containers, Automation</span>
+          <span>(2022 - Present)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 
             <section className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="flex items-center justify-start space-x-2">
