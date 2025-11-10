@@ -129,45 +129,104 @@ export default function Home() {
             <div className="flex flex-col mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="flex items-center justify-start space-x-2">
                 <i className="fas fa-briefcase fa-xl"></i>
-                <h2 className="text-2xl font-bold dark:text-white">Experience</h2>
+                <h2 className="text-2xl font-bold dark:text-white">Work</h2>
               </div>
-              <div className="mt-4 space-y-4 dark:text-custom-grey">
-                <div>
-                  <h3 className="font-bold">Independent Information Security & Systems Administration Consultant</h3>
-                  <span>2023 - Present</span>
-                  <ul className="list-disc list-inside mt-2">
-                    <li>Policies, Executive Summaries, Pen-testing (Windows, Linux, Web Servers), Vulnerability Assessment, Network/Log Analysis, System Hardening, Active Directory/Group Policy, Backup & Recovery</li>
-                    <li>Cloud & Container Orchestration (AWS, Azure, GCP, Kubernetes), Automation of cloud servers with Terraform, Docker, GitHub</li>
-                  </ul>
+              <div className="mt-4 space-y-4">
+                <div className="flex items-center space-x-4 dark:text-custom-grey">
+                  <Image src="/lumen.png" alt="Lumen" width={50} height={50} className="w-8 h-8" />
+                  <div className="flex flex-col">
+                    <h3 className="font-bold">Lumen</h3>
+                    <div className="flex justify-between space-x-2">
+                      <span>Cybersecurity Analyst</span>
+                      <span>(2024)</span>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-bold">Cybersecurity Policy Project (NDA)</h3>
-                  <span>2024 - Fall</span>
-                  <ul className="list-disc list-inside mt-2">
-                    <li>Updated corporate cybersecurity policies and contributed to HIPAA Risk Analysis for a Utah-based company</li>
-                  </ul>
-                </div>
-                <div>
-                  <h3 className="font-bold">Experienced Projects</h3>
-                  <span>2022 - Present</span>
-                  <ul className="list-disc list-inside mt-2">
-                    <li>Linux LAMP, Kali Pen-Testing, Digital Forensics (FTK Imager, Autopsy), SQL DB administration, Wireshark packet & log analysis</li>
-                    <li>Designed and integrated SIEM/SOAR (AlienVault/Wazuh) workflows for threat detection, real-time file monitoring, and automated quarantine response</li>
-                    <li>Kubernetes, clusters, containers, cloud security, orchestration for apps/websites (AWS, GCP, Azure), patch management, system monitoring, backup/recovery</li>
-                    <li>See projects in: <a href="https://github.com/gustavocerv?tab=repositories" className="text-teal-500 dark:text-teal-400">GitHub</a>, <a href="https://portfolio-app-956456382165.us-central1.run.app" className="text-teal-500 dark:text-teal-400">Portfolio App</a></li>
-                  </ul>
+                <div className="flex items-center space-x-4 dark:text-custom-grey">
+                  <Image src="/jn.png" alt="JN Aceros" width={50} height={50} className="w-8 h-8" />
+                  <div className="flex flex-col">
+                    <h3 className="font-bold">JN Aceros</h3>
+                    <div className="flex justify-between space-x-2">
+                      <span>IT Security Intern</span>
+                      <span>(2012 - 2013)</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Skills Section (unchanged) */}
             <section className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="flex items-center justify-start space-x-2">
                 <i className="fas fa-cogs fa-xl"></i>
                 <h2 className="text-2xl font-bold dark:text-white">Some of the cybersecurity skills I have developed</h2>
               </div>
               <div className="mt-4 space-y-4">
-                {/* Skills bars code unchanged */}
+
+                <div className="flex items-center space-x-4">
+                  <Image src="/python.png" alt="Python" width={50} height={50} className="w-12 h-12" />
+                  <div className="flex flex-col w-full">
+                    <div className="flex justify-between">
+                      <span>Python</span>
+                      <span className="text-blue-500">95%</span>
+                    </div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '95%' }}></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <Image src="/linux.png" alt="Linux" width={50} height={50} className="w-12 h-12" />
+                  <div className="flex flex-col w-full">
+                    <div className="flex justify-between">
+                      <span>Linux Administration</span>
+                      <span className="text-blue-500">85%</span>
+                    </div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '85%' }}></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <Image src="/network.png" alt="Networking" width={50} height={50} className="w-12 h-12" />
+                  <div className="flex flex-col w-full">
+                    <div className="flex justify-between">
+                      <span>Networking</span>
+                      <span className="text-blue-500">80%</span>
+                    </div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '80%' }}></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <Image src="/pentest.png" alt="Pen Testing" width={50} height={50} className="w-12 h-12" />
+                  <div className="flex flex-col w-full">
+                    <div className="flex justify-between">
+                      <span>Penetration Testing</span>
+                      <span className="text-blue-500">75%</span>
+                    </div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '75%' }}></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="flex items-center space-x-4">
+                  <Image src="/cloud.png" alt="Cloud Security" width={50} height={50} className="w-12 h-12" />
+                  <div className="flex flex-col w-full">
+                    <div className="flex justify-between">
+                      <span>Cloud Security</span>
+                      <span className="text-blue-500">70%</span>
+                    </div>
+                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '70%' }}></div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </section>
           </div>
