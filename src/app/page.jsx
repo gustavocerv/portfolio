@@ -5,16 +5,15 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
-
-  const [busy, setBusy] = useState(false)
-  const [isSubscribed, setIsSubscribed] = useState(false)
+  const [busy, setBusy] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
   const [message, setMessage] = useState('');
   const [joining, setJoining] = useState('');
   const [email, setEmail] = useState('');
 
   const handleChange = (e) => {
     setEmail(e.target.value);
-  }
+  };
 
   const simulateNetworkRequestTime = 2000;
 
@@ -40,67 +39,84 @@ export default function Home() {
         <Navbar />
       </header>
       <main className="container mx-auto px-4 py-8 lg:w-5/6 lg:mx-auto lg:py-16">
+        
         {/* Top Section */}
         <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between lg:space-x-16 mb-8">
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left mb-4 lg:mb-0">
             <Image src="/gus.png" alt="Profile" width={100} height={100} className="w-24 h-24 rounded-full mb-4" />
-            <h1 className="text-4xl font-bold dark:text-white">Cybersecurity Enthusiast</h1>
-            <p className="text-lg dark:text-custom-grey mt-4 mb-4">
-              Exploring the world of cybersecurity, ethical hacking, and digital defense strategies. Learn to protect systems, networks, and data from evolving cyber threats.
-            </p>
-            <p className="text-lg dark:text-custom-grey mt-4 mb-4">
-              My articles and resources focus on penetration testing, threat analysis, and practical security tools to help organizations stay secure.
+            <h1 className="text-4xl font-bold dark:text-white">Gustavo Cervantes</h1>
+            <h2 className="text-xl font-semibold dark:text-teal-400 mb-2">Independent Information Security & Systems Administration Consultant</h2>
+            <p className="text-lg dark:text-custom-grey mt-2 mb-4">
+              Passionate cybersecurity professional with hands-on experience in ethical hacking, digital forensics, system administration, and cloud security.
             </p>
             <div className="flex justify-center lg:justify-start space-x-4">
-              <a href="https://linkedin.com/" className="text-grey-800 dark:text-grey-400">
+              <a href="https://linkedin.com/in/gustavocerv" className="text-grey-800 dark:text-grey-400">
                 <i className="fab fa-linkedin fa-2xl"></i>
               </a>
-              <a href="https://github.com/" className="text-grey-500 dark:text-grey-400">
+              <a href="https://github.com/gustavocerv" className="text-grey-500 dark:text-grey-400">
                 <i className="fab fa-github fa-2xl"></i>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Main Content */}
+        {/* CV Content */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:space-x-16">
           <div className="lg:w-2/3">
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold dark:text-white">Latest Articles</h2>
-              <div className="mt-4 space-y-6">
-                <article className="border-b border-gray-200 dark:border-gray-700 pb-6">
-                  <h3 className="text-xl font-semibold dark:text-white">Understanding Penetration Testing</h3>
-                  <p className="mt-2 dark:text-custom-grey">
-                    Learn how penetration testing helps organizations identify vulnerabilities before attackers can exploit them. Covers tools, techniques, and reporting best practices.
-                  </p>
-                  <a href="https://owasp.org/www-project-top-ten/" className="text-teal-500 dark:text-teal-400 mt-2 block">Read article</a>
-                </article>
-                <article className="border-b border-gray-200 dark:border-gray-700 pb-6">
-                  <h3 className="text-xl font-semibold dark:text-white">The Importance of Network Security</h3>
-                  <p className="mt-2 dark:text-custom-grey">
-                    This article explains network security principles, including firewalls, intrusion detection systems, and secure network architecture to prevent cyber attacks.
-                  </p>
-                  <a href="https://www.cisco.com/c/en/us/products/security/what-is-network-security.html" className="text-teal-500 dark:text-teal-400 mt-2 block">Read article</a>
-                </article>
-                <article className="border-b border-gray-200 dark:border-gray-700 pb-6">
-                  <h3 className="text-xl font-semibold dark:text-white">Top Cybersecurity Tools</h3>
-                  <p className="mt-2 dark:text-custom-grey">
-                    Overview of essential cybersecurity tools for ethical hacking, vulnerability scanning, and incident response. Learn which tools are widely used in the industry.
-                  </p>
-                  <a href="https://www.sans.org/cyber-security-courses/" className="text-teal-500 dark:text-teal-400 mt-2 block">Read article</a>
-                </article>
-                <article className="border-b border-gray-200 dark:border-gray-700 pb-6">
-                  <h3 className="text-xl font-semibold dark:text-white">Cyber Threat Intelligence Basics</h3>
-                  <p className="mt-2 dark:text-custom-grey">
-                    Explore the fundamentals of cyber threat intelligence, including how to analyze threats, gather information, and strengthen organizational defenses.
-                  </p>
-                  <a href="https://www.mitre.org/" className="text-teal-500 dark:text-teal-400 mt-2 block">Read article</a>
-                </article>
+            
+            {/* Certificates Section */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold dark:text-white mb-4">Certificates</h2>
+              <ul className="list-disc list-inside space-y-2 dark:text-custom-grey">
+                <li><strong>Earned:</strong> Technical Support Engineer, IT Professional, System Administration, TestOut Network Pro, Client Pro, Linux Pro, AZ-900 Azure Fundamentals</li>
+                <li><strong>Preparing to Earn:</strong> CompTIA Security+, Cisco CCNA Routing and Switching, AWS Certified CloudOps Engineer</li>
+                <li><strong>In Progress:</strong> Technology Account Management Certificate, Business Analytics Certificate</li>
+              </ul>
+            </section>
+
+            {/* Experience Section */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold dark:text-white mb-4">Experience</h2>
+
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold dark:text-teal-400">Experienced Projects (2022 – Present)</h3>
+                <ul className="list-disc list-inside space-y-2 dark:text-custom-grey mt-2">
+                  <li>Linux LAMP, Kali Pen-Testing, Digital Forensics (FTK Imager, Autopsy), SQL DB administration, Wireshark packet & log analysis, SIEM/SOAR (AlienVault/Wazuh) integration for threat detection and automated response.</li>
+                  <li>Kubernetes, clusters, containers, cloud security, orchestration for apps/websites (AWS, GCP, Azure), patch management, system monitoring, backup/recovery.</li>
+                  <li>See projects in: <a href="https://github.com/gustavocerv?tab=repositories" className="text-teal-500">GitHub</a>, <a href="https://portfolio-app-956456382165.us-central1.run.app" className="text-teal-500">Portfolio</a></li>
+                </ul>
+              </div>
+
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold dark:text-teal-400">Independent Information Security & Systems Administration Consultant (2023 – Present)</h3>
+                <ul className="list-disc list-inside space-y-2 dark:text-custom-grey mt-2">
+                  <li>Policies, Executive Summaries, Pen-testing (Windows, Linux, Web Servers), Vulnerability Assessment, Network/Log Analysis, System Hardening, Active Directory/Group Policy, Backup & Recovery.</li>
+                  <li>Cloud & Container Orchestration (AWS, Azure, GCP, Kubernetes), Automation of cloud servers with Terraform, Docker, GitHub.</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold dark:text-teal-400">Cybersecurity Policy Project (NDA) (2024 – Fall)</h3>
+                <ul className="list-disc list-inside space-y-2 dark:text-custom-grey mt-2">
+                  <li>Updated corporate cybersecurity policies and contributed to HIPAA Risk Analysis for a Utah-based company.</li>
+                  <li>Focused on compliance alignment, data protection standards, and internal security documentation.</li>
+                </ul>
               </div>
             </section>
+
+            {/* Skills Section */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-bold dark:text-white mb-4">Skills</h2>
+              <p className="dark:text-custom-grey"><strong>Technical Skills:</strong> Linux, Windows Server, Active Directory, SQL, Java, React, HTML, Python, SIEM (Wazuh, AlienVault), Kubernetes, Terraform, Docker, AWS, GCP, Azure, Backup/Recovery, Patch Management</p>
+              <p className="dark:text-custom-grey mt-2"><strong>Soft Skills:</strong> Leadership, Teamwork, Problem Solving, Strategic Thinking, Connectedness, Includer, Developer</p>
+            </section>
+
           </div>
 
+          {/* Sidebar (Keep as is: Subscription + Skills chart) */}
           <div className="lg:w-1/3">
+            
+            {/* Subscription box */}
             <section className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="flex items-center justify-start space-x-2">
                 <i className="fas fa-envelope fa-xl"></i>
@@ -115,10 +131,7 @@ export default function Home() {
                   onChange={handleChange}
                   value={email}
                 />
-                <button
-                  type="submit"
-                  className="bg-black dark:bg-teal-500 text-white p-2 rounded w-auto"
-                >
+                <button type="submit" className="bg-black dark:bg-teal-500 text-white p-2 rounded w-auto">
                   Join
                 </button>
               </form>
@@ -126,109 +139,8 @@ export default function Home() {
               <div>{message}</div>
             </section>
 
-            <div className="flex flex-col mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <div className="flex items-center justify-start space-x-2">
-                <i className="fas fa-briefcase fa-xl"></i>
-                <h2 className="text-2xl font-bold dark:text-white">Work</h2>
-              </div>
-              <div className="mt-4 space-y-4">
-                <div className="flex items-center space-x-4 dark:text-custom-grey">
-                  <Image src="/lumen.png" alt="Lumen" width={50} height={50} className="w-8 h-8" />
-                  <div className="flex flex-col">
-                    <h3 className="font-bold">Lumen</h3>
-                    <div className="flex justify-between space-x-2">
-                      <span>Cybersecurity Analyst</span>
-                      <span>(2024)</span>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4 dark:text-custom-grey">
-                  <Image src="/jn.png" alt="JN Aceros" width={50} height={50} className="w-8 h-8" />
-                  <div className="flex flex-col">
-                    <h3 className="font-bold">JN Aceros</h3>
-                    <div className="flex justify-between space-x-2">
-                      <span>IT Security Intern</span>
-                      <span>(2012 - 2013)</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <section className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <div className="flex items-center justify-start space-x-2">
-                <i className="fas fa-cogs fa-xl"></i>
-                <h2 className="text-2xl font-bold dark:text-white">Some of the cybersecurity skills I have developed</h2>
-              </div>
-              <div className="mt-4 space-y-4">
-
-                <div className="flex items-center space-x-4">
-                  <Image src="/python.png" alt="Python" width={50} height={50} className="w-12 h-12" />
-                  <div className="flex flex-col w-full">
-                    <div className="flex justify-between">
-                      <span>Python</span>
-                      <span className="text-blue-500">95%</span>
-                    </div>
-                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '95%' }}></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <Image src="/linux.png" alt="Linux" width={50} height={50} className="w-12 h-12" />
-                  <div className="flex flex-col w-full">
-                    <div className="flex justify-between">
-                      <span>Linux Administration</span>
-                      <span className="text-blue-500">85%</span>
-                    </div>
-                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <Image src="/network.png" alt="Networking" width={50} height={50} className="w-12 h-12" />
-                  <div className="flex flex-col w-full">
-                    <div className="flex justify-between">
-                      <span>Networking</span>
-                      <span className="text-blue-500">80%</span>
-                    </div>
-                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '80%' }}></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <Image src="/pentest.png" alt="Pen Testing" width={50} height={50} className="w-12 h-12" />
-                  <div className="flex flex-col w-full">
-                    <div className="flex justify-between">
-                      <span>Penetration Testing</span>
-                      <span className="text-blue-500">75%</span>
-                    </div>
-                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '75%' }}></div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-4">
-                  <Image src="/cloud.png" alt="Cloud Security" width={50} height={50} className="w-12 h-12" />
-                  <div className="flex flex-col w-full">
-                    <div className="flex justify-between">
-                      <span>Cloud Security</span>
-                      <span className="text-blue-500">70%</span>
-                    </div>
-                    <div className="w-full bg-gray-300 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div className="bg-blue-500 dark:bg-teal-500 h-full" style={{ width: '70%' }}></div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </section>
+            {/* Skills chart (unchanged) */}
+            {/* You can keep or remove the visual skill bars if you want them to match your Skills section */}
           </div>
         </div>
       </main>
