@@ -180,19 +180,6 @@ export default function Home() {
         </div>
       </div>
     </div>
-
-    {/* Experienced Projects */}
-    <div className="flex items-center space-x-4 dark:text-custom-grey">
-      <Image src="/projects.png" alt="Experienced Projects" width={50} height={50} className="w-8 h-8" />
-      <div className="flex flex-col">
-        <h3 className="font-bold">Experienced Projects</h3>
-        <div className="flex justify-between space-x-2">
-          <span>Linux, Pen-Testing, SIEM/SOAR, Cloud, Containers, Automation</span>
-          <span>(2022 - Present)</span>
-        </div>
-      </div>
-    </div>
-
   </div>
 </div>
 
