@@ -39,7 +39,6 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-
       <main className="container mx-auto px-4 py-8 lg:w-5/6 lg:mx-auto lg:py-16">
         {/* Top Section */}
         <div className="flex flex-col items-center lg:items-start lg:flex-row lg:justify-between lg:space-x-16 mb-8">
@@ -66,7 +65,6 @@ export default function Home() {
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row lg:justify-between lg:space-x-16">
           <div className="lg:w-2/3">
-            {/* Articles Section */}
             <section className="mb-8">
               <h2 className="text-2xl font-bold dark:text-white">Latest Articles</h2>
               <div className="mt-4 space-y-6">
@@ -77,7 +75,6 @@ export default function Home() {
                   </p>
                   <a href="https://owasp.org/www-project-top-ten/" className="text-teal-500 dark:text-teal-400 mt-2 block">Read article</a>
                 </article>
-
                 <article className="border-b border-gray-200 dark:border-gray-700 pb-6">
                   <h3 className="text-xl font-semibold dark:text-white">The Importance of Network Security</h3>
                   <p className="mt-2 dark:text-custom-grey">
@@ -85,7 +82,6 @@ export default function Home() {
                   </p>
                   <a href="https://www.cisco.com/c/en/us/products/security/what-is-network-security.html" className="text-teal-500 dark:text-teal-400 mt-2 block">Read article</a>
                 </article>
-
                 <article className="border-b border-gray-200 dark:border-gray-700 pb-6">
                   <h3 className="text-xl font-semibold dark:text-white">Top Cybersecurity Tools</h3>
                   <p className="mt-2 dark:text-custom-grey">
@@ -93,7 +89,6 @@ export default function Home() {
                   </p>
                   <a href="https://www.sans.org/cyber-security-courses/" className="text-teal-500 dark:text-teal-400 mt-2 block">Read article</a>
                 </article>
-
                 <article className="border-b border-gray-200 dark:border-gray-700 pb-6">
                   <h3 className="text-xl font-semibold dark:text-white">Cyber Threat Intelligence Basics</h3>
                   <p className="mt-2 dark:text-custom-grey">
@@ -103,49 +98,9 @@ export default function Home() {
                 </article>
               </div>
             </section>
-
-            {/* Resume Section */}
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold dark:text-white mb-4">Resume</h2>
-
-              <h3 className="text-xl font-semibold dark:text-white mt-4">Certificates</h3>
-              <ul className="list-disc ml-6 dark:text-custom-grey mt-2">
-                <li><strong>Earned:</strong> Technical Support Engineer, IT Professional, System Administration, TestOut Network/Client/Linux Pro, AZ-900 Azure Fundamentals</li>
-                <li><strong>Preparing to be earned:</strong> CISS, Cisco CCNA Routing and Switching, AWS Certified CloudOps Engineer</li>
-                <li><strong>In progress:</strong> Technology Account Management Certificate, Business Analytics Certificate</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold dark:text-white mt-6">Experience</h3>
-              <p className="dark:text-custom-grey mt-2"><strong>Experienced Projects</strong> (2022 - Present)</p>
-              <ul className="list-disc ml-6 dark:text-custom-grey mt-2">
-                <li>Linux LAMP, Kali Pen-Testing, Digital Forensics (FTK Imager, Autopsy), SQL DB administration, Wireshark packet & log analysis, SIEM/SOAR (AlienVault/Wazuh) integration for threat detection and automated response</li>
-                <li>Kubernetes, clusters, containers, cloud security, orchestration for apps/websites (AWS, GCP, Azure), patch management, system monitoring, backup/recovery</li>
-                <li>See projects in: <a href="https://github.com/gustavocerv?tab=repositories" className="text-teal-500">GitHub</a>, <a href="https://portfolio-app-956456382165.us-central1.run.app" className="text-teal-500">Portfolio</a></li>
-              </ul>
-
-              <p className="dark:text-custom-grey mt-4"><strong>Independent Information Security & System Administration Consultant</strong> (2023 - Present)</p>
-              <ul className="list-disc ml-6 dark:text-custom-grey mt-2">
-                <li>Policies, Executive Summaries, Pen-testing (Windows, Linux, Web Servers), Vulnerability Assessment, Network/Log Analysis, System Hardening, Active Directory/Group Policy, Backup & Recovery</li>
-                <li>Cloud & Container Orchestration (AWS, Azure, GCP, Kubernetes), Automation of cloud servers with Terraform, Docker, GitHub</li>
-              </ul>
-
-              <p className="dark:text-custom-grey mt-4"><strong>Cybersecurity Policy Project under Non-Disclosure Agreement (NDA)</strong> (2024 - Fall)</p>
-              <ul className="list-disc ml-6 dark:text-custom-grey mt-2">
-                <li>Updated corporate cybersecurity policies and contributed to HIPAA Risk Analysis for a Utah-based company</li>
-                <li>Focused on compliance alignment, data protection standards, and internal security documentation</li>
-              </ul>
-
-              <h3 className="text-xl font-semibold dark:text-white mt-6">Skills</h3>
-              <ul className="list-disc ml-6 dark:text-custom-grey mt-2">
-                <li><strong>Technical Skills:</strong> Linux, Windows Server, AD, SQL, Java, React, Html, Python, SIEM (Wazuh, AlienVault), Kubernetes, Terraform, Docker, AWS, GCP, Azure, Backup/Recovery, Patch Management</li>
-                <li><strong>Soft Skills:</strong> Leadership, Teamwork, Problem Solving, Strategic, Connectedness, Includer, Developer</li>
-              </ul>
-            </section>
           </div>
 
-          {/* Sidebar */}
           <div className="lg:w-1/3">
-            {/* Subscribe Section */}
             <section className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="flex items-center justify-start space-x-2">
                 <i className="fas fa-envelope fa-xl"></i>
@@ -171,20 +126,53 @@ export default function Home() {
               <div>{message}</div>
             </section>
 
-            {/* Skills Section */}
+            <div className="flex flex-col mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <div className="flex items-center justify-start space-x-2">
+                <i className="fas fa-briefcase fa-xl"></i>
+                <h2 className="text-2xl font-bold dark:text-white">Experience</h2>
+              </div>
+              <div className="mt-4 space-y-4 dark:text-custom-grey">
+                <div>
+                  <h3 className="font-bold">Independent Information Security & Systems Administration Consultant</h3>
+                  <span>2023 - Present</span>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Policies, Executive Summaries, Pen-testing (Windows, Linux, Web Servers), Vulnerability Assessment, Network/Log Analysis, System Hardening, Active Directory/Group Policy, Backup & Recovery</li>
+                    <li>Cloud & Container Orchestration (AWS, Azure, GCP, Kubernetes), Automation of cloud servers with Terraform, Docker, GitHub</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold">Cybersecurity Policy Project (NDA)</h3>
+                  <span>2024 - Fall</span>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Updated corporate cybersecurity policies and contributed to HIPAA Risk Analysis for a Utah-based company</li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="font-bold">Experienced Projects</h3>
+                  <span>2022 - Present</span>
+                  <ul className="list-disc list-inside mt-2">
+                    <li>Linux LAMP, Kali Pen-Testing, Digital Forensics (FTK Imager, Autopsy), SQL DB administration, Wireshark packet & log analysis</li>
+                    <li>Designed and integrated SIEM/SOAR (AlienVault/Wazuh) workflows for threat detection, real-time file monitoring, and automated quarantine response</li>
+                    <li>Kubernetes, clusters, containers, cloud security, orchestration for apps/websites (AWS, GCP, Azure), patch management, system monitoring, backup/recovery</li>
+                    <li>See projects in: <a href="https://github.com/gustavocerv?tab=repositories" className="text-teal-500 dark:text-teal-400">GitHub</a>, <a href="https://portfolio-app-956456382165.us-central1.run.app" className="text-teal-500 dark:text-teal-400">Portfolio App</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Skills Section (unchanged) */}
             <section className="mb-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <div className="flex items-center justify-start space-x-2">
                 <i className="fas fa-cogs fa-xl"></i>
                 <h2 className="text-2xl font-bold dark:text-white">Some of the cybersecurity skills I have developed</h2>
               </div>
               <div className="mt-4 space-y-4">
-                {/* Skill bars remain unchanged */}
+                {/* Skills bars code unchanged */}
               </div>
             </section>
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
   );
