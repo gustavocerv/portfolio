@@ -176,7 +176,7 @@ export default function Home() {
         <h3 className="font-bold">Cybersecurity Policy Project (NDA)</h3>
         <div className="flex justify-between space-x-2">
           <span>Corporate Security & HIPAA Risk Analysis</span>
-          <span>(2024 - Fall)</span>
+          <span>(2024)</span>
         </div>
       </div>
     </div>
